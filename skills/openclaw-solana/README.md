@@ -1,6 +1,10 @@
 # OpenClaw Solana Skill
 
-A comprehensive toolkit for autonomous agents to create and manage Solana wallets, execute trades, and interact with DeFi protocols - specifically designed for Agent Index integration.
+> **Vendored dependency.** This is a fork of the [OpenClaw](https://github.com/AiAnonymous/OpenClaw) Solana toolkit, vendored into the Clawfund repo for auditability. OpenClaw is a separate, upstream project -- not built or maintained by Clawfund.
+
+A comprehensive toolkit for autonomous agents to create and manage Solana wallets, execute trades, and interact with DeFi protocols -- specifically designed for Agent Index integration.
+
+---
 
 ## Overview
 
@@ -280,10 +284,10 @@ const trader = new AgentTrader({
 // Run every 5 minutes
 trader.on('cycle', async (cycle) => {
   console.log('Cycle:', cycle.id);
-  
+
   // Get proposals
   const proposals = await trader.getTopProposals();
-  
+
   // Vote on existing proposals
   for (const proposal of proposals) {
     const analysis = await trader.analyze(proposal);
@@ -294,7 +298,7 @@ trader.on('cycle', async (cycle) => {
       });
     }
   }
-  
+
   // Submit new proposal if conditions met
   const signal = await trader.generateSignal();
   if (signal.strength > 0.8) {
@@ -368,34 +372,28 @@ See `/examples` directory for complete implementations:
 
 ```
 openclaw-solana/
-├── src/
-│   ├── wallet/           # Wallet management
-│   │   ├── AgentWallet.ts
-│   │   ├── MultiSigWallet.ts
-│   │   ├── StorageAdapters/
-│   │   └── KeyDerivation.ts
-│   ├── trading/          # Trading functionality
-│   │   ├── PumpPortal.ts
-│   │   ├── Jupiter.ts
-│   │   └── Raydium.ts
-│   ├── agent-index/      # Agent Index integration
-│   │   ├── Client.ts
-│   │   ├── Onboarding.ts
-│   │   └── AutoTrader.ts
-│   └── utils/            # Utilities
-│       ├── Crypto.ts
-│       ├── Validation.ts
-│       └── Logger.ts
-├── cli/                  # Command line interface
-├── examples/             # Example implementations
-└── tests/                # Test suite
+  src/
+    wallet/           # Wallet management
+      AgentWallet.ts
+      MultiSigWallet.ts
+      StorageAdapters/
+      KeyDerivation.ts
+    trading/          # Trading functionality
+      PumpPortal.ts
+      Jupiter.ts
+      Raydium.ts
+    agent-index/      # Agent Index integration
+      Client.ts
+      Onboarding.ts
+      AutoTrader.ts
+    utils/            # Utilities
+      Crypto.ts
+      Validation.ts
+      Logger.ts
+  cli/                # Command line interface
+  examples/           # Example implementations
+  tests/              # Test suite
 ```
-
----
-
-## Contributing
-
-We welcome contributions from the agent community! See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ---
 
@@ -405,7 +403,9 @@ MIT License - see [LICENSE](./LICENSE)
 
 ---
 
-## Support
+## Upstream (OpenClaw)
+
+This skill is vendored from the OpenClaw project. These are **their** links, not Clawfund's:
 
 - **Discord:** https://discord.gg/openclaw
 - **X/Twitter:** https://x.com/openclaw
@@ -413,4 +413,10 @@ MIT License - see [LICENSE](./LICENSE)
 
 ---
 
-Built with love for the autonomous agent ecosystem
+## Clawfund
+
+For Clawfund-specific questions, issues, or contributions:
+
+- **X:** [@clawfundsol](https://x.com/openclaw)
+- **GitHub:** https://github.com/clawfund/clawfund-agent
+- **Site:** https://clawfund.tech
