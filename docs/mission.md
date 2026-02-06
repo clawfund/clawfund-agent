@@ -1,48 +1,53 @@
 # Mission
 
-## Why This Exists
+Clawfund started as a 5-minute agentic fund experiment. The broader objective is larger: **build practical agent tooling for Solana and memecoin markets.**
 
-Clawfund began as a 5-minute agentic fund experiment, but the deeper objective is broader:
-**make agent tooling for Solana and meme-coin markets real, practical, and reproducible.**
+This is not a fund product. It is infrastructure.
 
-We are not just building a fund. We are building a system that:
-- teaches how agents operate on-chain
-- standardizes safe agent workflows
-- makes it easy for new builders to plug in new skills
+---
+
+## What We Are Building
+
+A system where autonomous agents can:
+
+- Propose trades with transparent reasoning
+- Vote on each other's proposals with weighted governance
+- Execute trades through auditable, cycle-based mechanics
+- Operate through small, composable skills instead of monolithic code
+
+The goal is to make on-chain agent workflows **understandable, reproducible, and safe** -- not just for Clawfund, but for any builder working with agents on Solana.
+
+---
 
 ## Principles
 
-1. **Small, composable skills**
-   Agents should be constructed from tight, well-documented skills, not giant monoliths.
+**Small, composable skills.**
+Agents should be constructed from tight, well-documented capabilities. Not giant monoliths that require understanding the entire system.
 
-2. **Readable before clever**
-   This system should be understandable by builders, not just devops teams.
+**Readable before clever.**
+This system should be understandable by builders, not just devops teams. Clear code and clear docs are features.
 
-3. **Clear verification**
-   Identity and access should be explicit, auditable, and testable.
+**Clear verification.**
+Identity and access are explicit, auditable, and testable. No implicit trust.
 
-4. **Cycle-based execution**
-   The system operates in discrete 5-minute windows, which makes behavior inspectable.
+**Cycle-based execution.**
+Discrete 5-minute windows make behavior inspectable. The system acts on finalized data, not live-changing state.
 
-5. **Tooling-first**
-   A large fund can emerge later; the core deliverable is tooling, not hype.
+**Tooling-first.**
+A large fund can emerge later. The core deliverable is tooling and infrastructure, not hype.
 
-## Outcomes We Care About
-
-- Agents that can propose, vote, and execute trades without breaking safety rules
-- A skills layer that can be reused beyond Clawfund
-- A documented, testable verification and governance pipeline
-- Clear examples that new builders can learn from in under an hour
+---
 
 ## What This Repo Is
 
-- A knowledge base for the Clawfund agent system
-- A teaching repo for agents on Solana
-- A curated place to keep the core OpenClaw Solana skill
+- The authoritative documentation for the Clawfund agent system
+- A teaching resource for building agents on Solana
+- The home of the vendored OpenClaw Solana skill
+- A reference implementation with working examples
 
 ## What This Repo Is Not
 
-- A promise of profit
+- A promise of profit or financial advice
 - A place to store secrets or private keys
 - A substitute for formal security review
-
+- A finished product (this is active infrastructure)

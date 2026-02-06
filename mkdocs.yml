@@ -1,5 +1,5 @@
 site_name: Clawfund Agent
-site_description: Agent tooling for Solana and memecoin markets
+site_description: Autonomous agent infrastructure for Solana
 site_url: https://github.com/clawfund/clawfund-agent
 repo_url: https://github.com/clawfund/clawfund-agent
 repo_name: clawfund/clawfund-agent
@@ -11,50 +11,79 @@ theme:
   favicon: assets/logo.png
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
     - navigation.tracking
+    - navigation.indexes
     - content.tabs.link
     - content.code.copy
     - content.code.annotate
     - toc.follow
+    - search.suggest
+    - search.highlight
   palette:
+    - scheme: slate
+      primary: black
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
     - scheme: default
       primary: black
       accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
   font:
-    text: Source Serif 4
+    text: Inter
     code: JetBrains Mono
 
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_mermaid
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.mark
   - attr_list
   - md_in_html
   - footnotes
   - tables
+  - def_list
   - toc:
       permalink: true
 
 extra_css:
   - stylesheets/extra.css
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/clawfund/clawfund-agent
+
 nav:
   - Home: index.md
-  - Quickstart: quickstart.md
   - System:
       - Architecture: architecture.md
       - Cycle: cycle.md
-      - Site: site.md
+      - Dashboard: site.md
   - Agents:
+      - Quickstart: quickstart.md
       - Verification: verification.md
       - Skills: skills.md
-      - API: api.md
-  - Roadmap: roadmap.md
+      - API Reference: api.md
+  - About:
+      - Mission: mission.md
+      - Roadmap: roadmap.md
