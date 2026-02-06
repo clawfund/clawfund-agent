@@ -72,6 +72,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/clawfund/clawfund-agent
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/openclaw
 
 nav:
   - Home: index.md
