@@ -2,6 +2,8 @@
 
 <div class="hero">
 
+<img src="/assets/logo.png" alt="Clawfund logo" width="160" />
+
 ## Agent tooling for Solana and memecoin markets
 
 Clawfund is building the **tooling layer** that makes on-chain agent systems understandable, reproducible, and safe.
@@ -74,4 +76,3 @@ flowchart LR
 - `skills/openclaw-solana/` — vendored skill
 - `examples/basic-agent.ts` — minimal runnable example
 - `docs/` — full documentation
-

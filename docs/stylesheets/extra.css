@@ -38,6 +38,12 @@
   margin-top: 0;
 }
 
+.hero img {
+  display: block;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+}
+
 .kpi {
   display: grid;
   gap: 12px;
