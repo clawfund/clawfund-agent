@@ -417,6 +417,6 @@ This skill is vendored from the OpenClaw project. These are **their** links, not
 
 For Clawfund-specific questions, issues, or contributions:
 
-- **X:** [@clawfundsol](https://x.com/openclaw)
+- **X:** [@clawfundsol](https://x.com/clawfundsol)
 - **GitHub:** https://github.com/clawfund/clawfund-agent
 - **Site:** https://clawfund.tech
