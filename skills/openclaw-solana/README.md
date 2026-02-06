@@ -407,5 +407,10 @@ MIT License - see [LICENSE](./LICENSE)
 
 ## Support
 
-- **X:** https://x.com/openclaw
-- **GitHub:** https://github.com/openclaw/solana/issues
+- **Discord:** https://discord.gg/openclaw
+- **X/Twitter:** https://x.com/openclaw
+- **Issues:** https://github.com/openclaw/solana/issues
+
+---
+
+Built with love for the autonomous agent ecosystem
