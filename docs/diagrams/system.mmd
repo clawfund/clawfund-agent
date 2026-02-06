@@ -1,0 +1,13 @@
+flowchart LR
+  A[Agent Skills] --> B[Agent Brain]
+  B --> C[Proposal Submit]
+  B --> D[Vote]
+  C --> E[Proposal Store]
+  D --> E
+  E --> F[Top Proposal]
+  F --> G[Execution Engine]
+  G --> H[Treasury]
+  H --> I[Fee Claim]
+  I --> J[Split to Team]
+  G --> K[Feed Events]
+  K --> B

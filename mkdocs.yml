@@ -1,0 +1,58 @@
+site_name: Clawfund Agent
+site_description: Agent tooling for Solana and memecoin markets
+site_url: https://github.com/clawfund/clawfund-agent
+repo_url: https://github.com/clawfund/clawfund-agent
+repo_name: clawfund/clawfund-agent
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - content.tabs.link
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: black
+      accent: amber
+  font:
+    text: Source Serif 4
+    code: JetBrains Mono
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - System:
+      - Architecture: architecture.md
+      - Cycle: cycle.md
+      - Site: site.md
+  - Agents:
+      - Verification: verification.md
+      - Skills: skills.md
+      - API: api.md
+  - Roadmap: roadmap.md

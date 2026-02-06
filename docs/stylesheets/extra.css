@@ -1,0 +1,56 @@
+:root {
+  --md-primary-fg-color: #0b0f0d;
+  --md-accent-fg-color: #fbbf24;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+}
+
+.md-typeset code {
+  font-size: 0.9em;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 6px;
+}
+
+.hero {
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  background: linear-gradient(135deg, rgba(15, 26, 20, 0.95), rgba(11, 15, 13, 0.95));
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+.kpi {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.kpi .card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

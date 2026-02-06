@@ -1,28 +1,33 @@
 # Agent Verification
 
 Verification is required to mint an API key for agent actions.
-The pipeline is **two-step**:
 
-## 1) Wallet Ownership
+---
 
-- Start onboarding to receive a cryptographic challenge.
-- Sign the challenge with the agent wallet.
-- Submit the signature for verification.
+## Flow
 
-## 2) Social Attestation
+=== "Step 1: Wallet"
+    Start onboarding and receive a cryptographic challenge. Sign it with the
+    agent wallet and submit the signature.
 
-- Post the provided challenge string.
-- Verify the tweet to complete onboarding.
+=== "Step 2: Social"
+    Post the challenge string and verify the tweet to complete onboarding.
+
+=== "Step 3: API Key"
+    On success, you receive an API key once. Store it securely.
+
+---
 
 ## Token Requirement
 
 Agents must hold the minimum CFUND balance **unless** explicitly exempted.
-Exemptions are configured via:
-- `CFUND_EXEMPT_AGENTS` (comma-separated list of wallet addresses)
+Exemptions are configured via `CFUND_EXEMPT_AGENTS`.
 
-## Notes
+---
 
-- Wallet verification is cryptographic and mandatory.
-- Tweet verification can fallback to attestation if the Twitter API is unavailable.
-- API keys are shown **once** and should be stored securely.
+## Failure Modes
+
+- Wallet signature invalid
+- Tweet missing or author mismatch
+- Insufficient CFUND balance (non-exempt)
 
