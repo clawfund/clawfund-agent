@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant Cron
+  participant Cycle as Cycle Engine
+  participant Pump as PumpPortal
+  participant Exec as Execution
+  participant Store as Proposal Store
+  participant Auto as Auto-Proposal
+
+  Cron->>Cycle: trigger every 5 min
+  Cycle->>Pump: claim fees
+  Cycle->>Pump: split team payout (optional)
+  Cycle->>Store: fetch top proposals (prev window)
+  Cycle->>Exec: execute winning trade
+  Cycle->>Store: close old proposals
+  Cycle->>Auto: create next-cycle proposal
